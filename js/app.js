@@ -73,10 +73,12 @@ function removeTask(e) {
 // Delete all tasks
 function deleteAllTasks() {
 
-    while (taskList.firstChild) {
-        taskList.removeChild(taskList.firstChild);
+    if( confirm('Are you sure you want to delete all tasks?') ) {
+        while (taskList.firstChild) {
+            taskList.removeChild(taskList.firstChild);
+        }
+        removeAllTasksFromLocalStorage();
     }
-    removeAllTasksFromLocalStorage();
 }
 
 // Search task
@@ -163,9 +165,7 @@ function removeTaskFromLocalStorage(taskValue) {
 
 // Remove all tasks
 function removeAllTasksFromLocalStorage() {
-    if( confirm('Are you sure you want to delete all tasks?')) {
-        localStorage.clear();
-    }
+        localStorage.clear(); 
 }
 
 // Set date 
