@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s3"></div>
+            <div class="col s6">
+                <div class="row">
+                    <div class="col s6">
+                        <h3 class="heading">ToDo App</h3>
+                    </div>
+                    <div class="col s6">
+                        <h3 class="time-head">
+                            <a href="https://time.is/Pune" id="time_is_link" rel="nofollow"
+                                style="font-size:36px;color:#fff">
+                                <span class="material-icons">schedule</span>
+                            </a>
+                            <span id="Pune_z424"></span>
+                        </h3>
+                    </div>
+                </div>
+
+                <div id="main" class="card z-depth-5">
+                    <div class="card-action">
+                        <div class="row">
+                            <form id="task-form" autocomplete="off">
+                                <div class="input-field col s10">
+                                    <input type="text" name="task" id="task">
+                                    <label for="task">New Task</label>
+                                </div>
+
+                                <div class="input-field col s2">
+                                    <button class="btn-floating btn-large waves-effect waves-light blue ">
+                                        <i class="material-icons">add</i>
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="row">
+                            <div class="col s6">
+                                <h5>All Tasks</h5>
+                            </div>
+                            <div class="col s6 input-field">
+                                <form autocomplete="off">
+                                    <input type="text" placeholder="Search" id="search">
+                                </form>
+                            </div>
+                        </div>
+
+                        <ul class="collection">
+                        </ul>
+                        <a href="#" class="clear-tasks waves-effect waves-light btn-small red darken-2">
+                            <i class="material-icons left">delete</i>
+                            Clear Tasks
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s3"></div>
+        </div>
+    </div>
+
+    <!-- JS Files -->
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Materialize.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Time Script -->
+    <script src="//widget.time.is/t.js"></script>
+    <script>
+        time_is_widget.init({ Pune_z424: { time_format: "12hours:minutes:secondsAMPM" } });
+    </script>
+
+    <!-- Custom Js -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
